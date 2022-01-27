@@ -1,0 +1,130 @@
+Instance: Template201Consent
+InstanceOf: PpqmConsent
+Title: "PpqmConsent for template 201 -- Full access for the patient"
+Usage: #example
+* text.status = #empty
+* text.div = "<p>Template 201 - Full access for the patient</p>"
+* identifier[0].type = #policySetId
+* identifier[0].value = "urn:uuid:57ab9b0d-7d97-4d85-9e4b-02bc7c939ad9"
+* identifier[1].type = #templateId
+* identifier[1].value = "201"
+* status = #active
+* scope.coding = #patient-privacy
+* category.coding = #INFA
+* patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
+* patient.identifier.value = "123456789012345678"
+* policyRule.coding = #urn:e-health-suisse:2015:policies:access-level:full
+* provision.actor.role.coding = #PAT
+* provision.actor.reference.identifier.type.coding = #urn:e-health-suisse:2015:epr-spid
+* provision.actor.reference.identifier.value = "123456789012345678"
+
+
+Instance: Template202Consent
+InstanceOf: PpqmConsent
+Title: "PpqmConsent for template 202 -- Access in emergency mode"
+Usage: #example
+* text.status = #empty
+* text.div = "<p>Template 202 - Access in emergency mode</p>"
+* identifier[0].type = #policySetId
+* identifier[0].value = "urn:uuid:bf6c1fb6-2eb9-49ad-b96b-1a4ac55fc7bd"
+* identifier[1].type = #templateId
+* identifier[1].value = "202"
+* status = #active
+* scope.coding = #patient-privacy
+* category.coding = #INFA
+* patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
+* patient.identifier.value = "123456789012345678"
+* policyRule.coding = #urn:e-health-suisse:2015:policies:emergency-access-level:normal
+* provision.actor.role.coding = #HCP
+* provision.actor.reference.display = "all"
+* provision.purpose = #EMER
+
+
+Instance: Template203Consent
+InstanceOf: PpqmConsent
+Title: "PpqmConsent for template 203 -- Default provide level"
+Usage: #example
+* text.status = #empty
+* text.div = "<p>Template 203 - Default provide level</p>"
+* identifier[0].type = #policySetId
+* identifier[0].value = "urn:uuid:710e4211-d431-430b-a849-1d689e74e4c2"
+* identifier[1].type = #templateId
+* identifier[1].value = "203"
+* status = #active
+* scope.coding = #patient-privacy
+* category.coding = #INFA
+* patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
+* patient.identifier.value = "123456789012345678"
+* policyRule.coding = #urn:e-health-suisse:2015:policies:provide-level:restricted
+* provision.actor.role.coding = #HCP
+* provision.actor.reference.display = "all"
+* provision.purpose[0] = #NORM
+* provision.purpose[1] = #AUTO
+
+
+Instance: Template301Consent
+InstanceOf: PpqmConsent
+Title: "PpqmConsent for template 301 -- Access level for a healthcare professional"
+Usage: #example
+* text.status = #empty
+* text.div = "<p>Template 301 - Access level for a healthcare professional</p>"
+* identifier[0].type = #policySetId
+* identifier[0].value = "urn:uuid:f1e1ed8e-0582-4e47-a76e-5e8f6cc0908f"
+* identifier[1].type = #templateId
+* identifier[1].value = "301"
+* status = #active
+* scope.coding = #patient-privacy
+* category.coding = #INFA
+* patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
+* patient.identifier.value = "123456789012345678"
+* policyRule.coding = #urn:e-health-suisse:2015:policies:access-level:delegation-and-normal
+* provision.period.end = "2022-02-15"
+* provision.actor.role.coding = #HCP
+* provision.actor.reference.identifier.type.coding = #urn:gs1:gln
+* provision.actor.reference.identifier.value = "9876543210987"
+* provision.purpose[0] = #NORM
+
+
+Instance: Template302Consent
+InstanceOf: PpqmConsent
+Title: "PpqmConsent for template 302 -- Access level for a group of healthcare professionals"
+Usage: #example
+* text.status = #empty
+* text.div = "<p>Template 302 -- Access level for a group of healthcare professionals</p>"
+* identifier[0].type = #policySetId
+* identifier[0].value = "urn:uuid:c23c862a-b297-43c7-875b-d933982c9756"
+* identifier[1].type = #templateId
+* identifier[1].value = "302"
+* status = #active
+* scope.coding = #patient-privacy
+* category.coding = #INFA
+* patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
+* patient.identifier.value = "123456789012345678"
+* policyRule.coding = #urn:e-health-suisse:2015:policies:access-level:restricted
+* provision.period.start = "2022-02-01"
+* provision.period.end = "2022-02-15"
+* provision.actor.role.coding = #HCP
+* provision.actor.reference.identifier.type.coding = #urn:oasis:names:tc:xspa:1.0:subject:organization-id
+* provision.actor.reference.identifier.value = "urn:oid:1.2.3.4.5"
+* provision.purpose[0] = #NORM
+
+
+Instance: Template303Consent
+InstanceOf: PpqmConsent
+Title: "PpqmConsent for template 303 -- Full access for a representative"
+Usage: #example
+* text.status = #empty
+* text.div = "<p>Template 303 - Full access for a representative</p>"
+* identifier[0].type = #policySetId
+* identifier[0].value = "urn:uuid:f663289d-4cc4-41d7-a01d-213e18e1f722"
+* identifier[1].type = #templateId
+* identifier[1].value = "303"
+* status = #active
+* scope.coding = #patient-privacy
+* category.coding = #INFA
+* patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
+* patient.identifier.value = "123456789012345678"
+* policyRule.coding = #urn:e-health-suisse:2015:policies:access-level:full
+* provision.actor.role.coding = #REP
+* provision.actor.reference.identifier.type.coding = #urn:e-health-suisse:representative-id
+* provision.actor.reference.identifier.value = "representative12345"
