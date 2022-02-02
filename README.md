@@ -1,2 +1,2 @@
-# ch-ppq
-PPQ für mobile apps
+# CH:PPQm
+PPQ for mobile apps
