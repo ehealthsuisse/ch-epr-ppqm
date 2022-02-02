@@ -1,9 +1,10 @@
 Instance: Template201Consent
 InstanceOf: PpqmConsent
 Title: "PpqmConsent for template 201 -- Full access for the patient"
+Description: "PpqmConsent for template 201 -- Full access for the patient"
 Usage: #example
 * text.status = #empty
-* text.div = "<p>Template 201 - Full access for the patient</p>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 201 - Full access for the patient</p></div>"
 * identifier[0].type = #policySetId
 * identifier[0].value = "urn:uuid:57ab9b0d-7d97-4d85-9e4b-02bc7c939ad9"
 * identifier[1].type = #templateId
@@ -22,9 +23,10 @@ Usage: #example
 Instance: Template202Consent
 InstanceOf: PpqmConsent
 Title: "PpqmConsent for template 202 -- Access in emergency mode"
+Description: "PpqmConsent for template 202 -- Access in emergency mode"
 Usage: #example
 * text.status = #empty
-* text.div = "<p>Template 202 - Access in emergency mode</p>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 202 - Access in emergency mode</p></div>"
 * identifier[0].type = #policySetId
 * identifier[0].value = "urn:uuid:bf6c1fb6-2eb9-49ad-b96b-1a4ac55fc7bd"
 * identifier[1].type = #templateId
@@ -43,9 +45,10 @@ Usage: #example
 Instance: Template203Consent
 InstanceOf: PpqmConsent
 Title: "PpqmConsent for template 203 -- Default provide level"
+Description: "PpqmConsent for template 203 -- Default provide level"
 Usage: #example
 * text.status = #empty
-* text.div = "<p>Template 203 - Default provide level</p>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 203 - Default provide level</p></div>"
 * identifier[0].type = #policySetId
 * identifier[0].value = "urn:uuid:710e4211-d431-430b-a849-1d689e74e4c2"
 * identifier[1].type = #templateId
@@ -65,9 +68,10 @@ Usage: #example
 Instance: Template301Consent
 InstanceOf: PpqmConsent
 Title: "PpqmConsent for template 301 -- Access level for a healthcare professional"
+Description: "PpqmConsent for template 301 -- Access level for a healthcare professional"
 Usage: #example
 * text.status = #empty
-* text.div = "<p>Template 301 - Access level for a healthcare professional</p>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 301 - Access level for a healthcare professional</p></div>"
 * identifier[0].type = #policySetId
 * identifier[0].value = "urn:uuid:f1e1ed8e-0582-4e47-a76e-5e8f6cc0908f"
 * identifier[1].type = #templateId
@@ -88,9 +92,10 @@ Usage: #example
 Instance: Template302Consent
 InstanceOf: PpqmConsent
 Title: "PpqmConsent for template 302 -- Access level for a group of healthcare professionals"
+Description: "PpqmConsent for template 302 -- Access level for a group of healthcare professionals"
 Usage: #example
 * text.status = #empty
-* text.div = "<p>Template 302 -- Access level for a group of healthcare professionals</p>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 302 -- Access level for a group of healthcare professionals</p></div>"
 * identifier[0].type = #policySetId
 * identifier[0].value = "urn:uuid:c23c862a-b297-43c7-875b-d933982c9756"
 * identifier[1].type = #templateId
@@ -112,9 +117,10 @@ Usage: #example
 Instance: Template303Consent
 InstanceOf: PpqmConsent
 Title: "PpqmConsent for template 303 -- Full access for a representative"
+Description: "PpqmConsent for template 303 -- Full access for a representative"
 Usage: #example
 * text.status = #empty
-* text.div = "<p>Template 303 - Full access for a representative</p>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 303 - Full access for a representative</p></div>"
 * identifier[0].type = #policySetId
 * identifier[0].value = "urn:uuid:f663289d-4cc4-41d7-a01d-213e18e1f722"
 * identifier[1].type = #templateId

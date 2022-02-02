@@ -1,0 +1,26 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: ch.fhir.ig.ch-ppqm
+canonical: http://fhir.ch/ig/ch-ppqm
+name: ch-ppqm
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2022+
+releaseLabel: ci-build
+publisher:
+  name: FHIR.CH
+  url: http://fhir.ch
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
+
+dependencies:
+  ch.fhir.ig.ch-epr-term: 2.0.5
+  ch.fhir.ig.ch-epr-mhealth: 0.2.0
