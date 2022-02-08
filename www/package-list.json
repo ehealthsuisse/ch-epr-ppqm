@@ -3,12 +3,12 @@
   "title": "CH EPR PPQm",
   "category": "National Base",
   "introduction": "Implementation Guide for the Privacy Policy Query for Mobile (PPQm) for the Swiss EPR",
-  "canonical": "http://fhir.ch/ig/ch-ppqm
+  "canonical": "http://fhir.ch/ig/ch-epr-ppqm
   "list": [
     {
       "version": "current",
       "desc": "Continuous Integration Build (latest in version control)",
-      "path": "http://build.fhir.org/ig/ehealthsuisse/ch-ppqm",
+      "path": "http://build.fhir.org/ig/ehealthsuisse/ch-epr-ppqm",
       "status": "ci-build",
       "current": true
     }

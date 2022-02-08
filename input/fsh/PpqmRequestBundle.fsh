@@ -39,7 +39,7 @@ Severity:       #error
 Invariant:      ch-ppqm-constistent-ids
 Description:    "For PUT, policy set ID in the embedded resource shall be the same as in the entry URL"
 Expression:     "(request.method != 'PUT') or (resource.identifier.where(
-                    (type.coding.system = 'http://fhir.ch/ig/ch-ppqm/CodeSystem/PpqmConsentIdentifierType') and 
+                    (type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and 
                     (type.coding.code = 'policySetId')
                 ).value.lower() = request.url.substring(19).lower())"       // 19 is the length of "Consent?identifier="
 Severity:       #error

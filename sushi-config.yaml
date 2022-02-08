@@ -5,14 +5,16 @@
 id: ch.fhir.ig.ch-epr-ppqm
 canonical: http://fhir.ch/ig/ch-epr-ppqm
 name: ch_epr_ppqm
+title: CH EPR PPQm
+description: Implementation Guide for the Privacy Policy Query for Mobile (PPQm) for the Swiss EPR
 status: draft
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2022+
-releaseLabel: ci-build
+releaseLabel: DSTU 1
 publisher:
-  name: FHIR.CH
-  url: http://fhir.ch
+  name: eHealth Suisse
+  url: http://www.e-health-suisse.ch
 
 # ?--------------------------------------------menu.xml--------------------------------------------?
 # ¦  To use a provided input/includes/menu.xml file, delete the "menu" property below.             ¦
@@ -22,5 +24,5 @@ menu:
   Artifacts: artifacts.html
 
 dependencies:
-  ch.fhir.ig.ch-epr-term: 2.0.6
+  #ch.fhir.ig.ch-epr-term: 2.0.6
   ch.fhir.ig.ch-epr-mhealth: 1.0.0

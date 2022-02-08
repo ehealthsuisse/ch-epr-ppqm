@@ -165,7 +165,7 @@ Severity:       #error
 Invariant:      ch-ppqm-template-structure
 Description:    "The resource shall correspong to one of official policy set templates"
 Expression:     "(
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '201')) and 
+                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '201')) and 
                     (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:full') and 
                     provision.period.empty() and 
                     (provision.actor.role.coding.code = 'PAT') and 
@@ -175,7 +175,7 @@ Expression:     "(
                     provision.purpose.empty() and 
                     (provision.actor.reference.identifier.value = patient.identifier.value)
                 ) or (
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '202')) and 
+                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '202')) and 
                     (
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:emergency-access-level:normal') or 
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:emergency-access-level:restricted')
@@ -187,7 +187,7 @@ Expression:     "(
                     (provision.purpose.count() = 1) and 
                     (provision.purpose.code = 'EMER')
                 ) or (
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '203')) and 
+                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '203')) and 
                     (
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:provide-level:normal') or 
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:provide-level:restricted')
@@ -200,7 +200,7 @@ Expression:     "(
                     (provision.purpose.exists(code = 'NORM')) and
                     (provision.purpose.exists(code = 'AUTO'))
                 ) or (
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '301')) and 
+                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '301')) and 
                     (
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:normal') or 
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:restricted') or
@@ -215,7 +215,7 @@ Expression:     "(
                     (provision.purpose.count() = 1) and 
                     (provision.purpose.code = 'NORM')
                 ) or (
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '302')) and 
+                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '302')) and 
                     (
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:normal') or 
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:restricted')
@@ -228,7 +228,7 @@ Expression:     "(
                     (provision.purpose.count() = 1) and 
                     (provision.purpose.code = 'NORM')
                 ) or (
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '303')) and 
+                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '303')) and 
                     (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:full') and 
                     provision.period.empty() and 
                     (provision.actor.role.coding.code = 'REP') and 
