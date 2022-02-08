@@ -1,5 +1,5 @@
 {
-  "package-id": "ch.fhir.ig.ch-ppqm",
+  "package-id": "ch.fhir.ig.ch-epr-ppqm",
   "title": "CH EPR PPQm",
   "category": "National Base",
   "introduction": "Implementation Guide for the Privacy Policy Query for Mobile (PPQm) for the Swiss EPR",

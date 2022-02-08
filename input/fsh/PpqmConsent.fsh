@@ -4,7 +4,7 @@ Id: PpqmConsent
 Title: "PpqmConsent"
 Description: "Swiss EPR Policy Set as a Consent"
 
-* obeys ch-ppqm-template-structure
+* obeys ch-epr-ppqm-template-structure
 
 * identifier ^slicing.discriminator.type    = #pattern
 * identifier ^slicing.discriminator.path    = "type.coding"
@@ -24,7 +24,7 @@ Description: "Swiss EPR Policy Set as a Consent"
 * identifier[policySetId].system        0..0 
 * identifier[policySetId].value         1..1 MS
 * identifier[policySetId].value         ^short = "UUID of the policy set in URN format"
-* identifier[policySetId].value         obeys ch-ppqm-uuid-format
+* identifier[policySetId].value         obeys ch-epr-ppqm-uuid-format
 * identifier[policySetId].period        0..0 
 * identifier[policySetId].assigner      0..0
 
@@ -63,7 +63,7 @@ Description: "Swiss EPR Policy Set as a Consent"
 * patient.identifier.system     = "urn:oid:2.16.756.5.30.1.127.3.10.3"
 * patient.identifier.value      1..1
 * patient.identifier.value      ^short = "EPR-SPID of the patient (18 digits)"
-* patient.identifier.value      obeys ch-ppqm-epr-spid-format
+* patient.identifier.value      obeys ch-epr-ppqm-epr-spid-format
 * patient.identifier.period     0..0 
 * patient.identifier.assigner   0..0
 * patient.display               0..0
@@ -96,10 +96,10 @@ Description: "Swiss EPR Policy Set as a Consent"
 * provision.period          0..1
 * provision.period.start    0..1 MS
 * provision.period.start    ^short = "Start date of the policy set validity, yyyy-mm-dd"
-* provision.period.start    obeys ch-ppqm-date-format
+* provision.period.start    obeys ch-epr-ppqm-date-format
 * provision.period.end      1..1 MS
 * provision.period.end      ^short = "End date of the policy set validity, yyyy-mm-dd"
-* provision.period.end      obeys ch-ppqm-date-format
+* provision.period.end      obeys ch-epr-ppqm-date-format
 
 * provision.actor                       1..1
 * provision.actor.role                  1..1 MS
@@ -147,22 +147,22 @@ Description: "Swiss EPR Policy Set as a Consent"
 * provision.provision       0..0
 
 
-Invariant:      ch-ppqm-uuid-format
+Invariant:      ch-epr-ppqm-uuid-format
 Description:    "The policy set ID must be a UUID in URN format"
 Expression:     "lower().matches('^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$')"
 Severity:       #error
 
-Invariant:      ch-ppqm-epr-spid-format
+Invariant:      ch-epr-ppqm-epr-spid-format
 Description:    "The patient ID must be an EPR-SPID"
 Expression:     "matches('^[0-9]{18}$')"
 Severity:       #error
 
-Invariant:      ch-ppqm-date-format
+Invariant:      ch-epr-ppqm-date-format
 Description:    "Timestamp must have precision of days, i.e. not contain the time part"
 Expression:     "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')"
 Severity:       #error
 
-Invariant:      ch-ppqm-template-structure
+Invariant:      ch-epr-ppqm-template-structure
 Description:    "The resource shall correspong to one of official policy set templates"
 Expression:     "(
                     identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '201')) and 

@@ -4,16 +4,16 @@ Id: PpqmRequestBundle
 Title: "PpqmRequestBundle"
 Description: "Bundle for Mobile Privacy Policy Bundle Feed requests"
 
-* obeys ch-ppqm-method-equality
+* obeys ch-epr-ppqm-method-equality
 
 
 * type  = http://hl7.org/fhir/bundle-type#transaction
 
 * entry             1..*
-* entry             obeys ch-ppqm-constistent-ids
+* entry             obeys ch-epr-ppqm-constistent-ids
 * entry.resource    only PpqmConsent
 
-* entry.request                 obeys ch-ppqm-url-format
+* entry.request                 obeys ch-epr-ppqm-url-format
 * entry.request.method          from PpqmFeedRequestHttpMethod (required)
 * entry.request.ifNoneMatch     0..0
 * entry.request.ifModifiedSince 0..0
@@ -22,12 +22,12 @@ Description: "Bundle for Mobile Privacy Policy Bundle Feed requests"
 
 
 
-Invariant:      ch-ppqm-method-equality
+Invariant:      ch-epr-ppqm-method-equality
 Description:    "HTTP methods of all request shall be the same"
 Expression:     "entry.request.method.distinct().count() = 1"
 Severity:       #error
 
-Invariant:      ch-ppqm-url-format
+Invariant:      ch-epr-ppqm-url-format
 Description:    "URL format shall suit the HTTP method"
 Expression:     "(
                     (method = 'POST') and (url = 'Consent')
@@ -36,7 +36,7 @@ Expression:     "(
                 )"
 Severity:       #error
 
-Invariant:      ch-ppqm-constistent-ids
+Invariant:      ch-epr-ppqm-constistent-ids
 Description:    "For PUT, policy set ID in the embedded resource shall be the same as in the entry URL"
 Expression:     "(request.method != 'PUT') or (resource.identifier.where(
                     (type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and 
