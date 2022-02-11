@@ -7,3 +7,9 @@ Thumbs.db
 /template
 *.bat
 *.sh
+
+www/*   
+!www/package-list.json   
+!www/publish.ini
+
+*.jar

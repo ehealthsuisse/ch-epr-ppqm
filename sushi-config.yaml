@@ -1,13 +1,17 @@
 # ?--------------------------------------ImplementationGuide---------------------------------------?
-# ¦  The properties below are used to create the ImplementationGuide resource. For a list of       ¦
-# ¦  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    ¦
+# ï¿½  The properties below are used to create the ImplementationGuide resource. For a list of       ï¿½
+# ï¿½  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    ï¿½
 # ?------------------------------------------------------------------------------------------------?
 id: ch.fhir.ig.ch-epr-ppqm
 canonical: http://fhir.ch/ig/ch-epr-ppqm
 name: ch_epr_ppqm
-title: CH EPR PPQm
+title: CH EPR PPQm (R4)
 description: Implementation Guide for the Privacy Policy Query for Mobile (PPQm) for the Swiss EPR
-status: draft
+status: active
+license: CC-BY-SA-4.0
+copyright: CC-BY-SA-4.0
+jurisdiction: urn:iso:std:iso:3166#CH
+date: 2022-02-11
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2022+
@@ -17,7 +21,7 @@ publisher:
   url: http://www.e-health-suisse.ch
 
 # ?--------------------------------------------menu.xml--------------------------------------------?
-# ¦  To use a provided input/includes/menu.xml file, delete the "menu" property below.             ¦
+# ï¿½  To use a provided input/includes/menu.xml file, delete the "menu" property below.             ï¿½
 # ?------------------------------------------------------------------------------------------------?
 menu:
   Home: index.html
