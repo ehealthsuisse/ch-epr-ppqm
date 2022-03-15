@@ -19,7 +19,7 @@ resources, whose structure resembles the EPR flavor of XACML 2.0 Policy Set and 
 
 The CH:PPQm profile defines the following actors and transactions:
 
-![PPQm actor diagram](assets/images/actors.svg "PPQm actor diagram")
+<div>{% include actors.svg %}</div>
 
 Thereby, the Policy Repository is a component of an EPR reference community's central IT infrastructure.
 The Policy Source and Policy Consumer are the actors to be implemented in mobile clients.
