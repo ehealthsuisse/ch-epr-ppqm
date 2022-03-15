@@ -14,37 +14,46 @@ The CH:PPQm specification is based on:
 
 In CH:PPQm, EPR privacy policies are represented as [PpqmConsent](StructureDefinition-PpqmConsent.html)
 resources, whose structure resembles the EPR flavor of XACML 2.0 Policy Set and obeys the same logical constraints.
+<br/>
 
 ### Actors and Transactions
 
 The CH:PPQm profile defines the following actors and transactions:
 
-<div>{% include actors.svg %}</div>
+<div><img src="assets/images/actors.svg"/></div>
+<br/>
 
 Thereby, the Policy Repository is a component of an EPR reference community's central IT infrastructure.
 The Policy Source and Policy Consumer are the actors to be implemented in mobile clients.
+<br/>
+<br/>
 
 To create, update, or delete _single_ policies 
 ([PpqmConsent](StructureDefinition-PpqmConsent.html) resources) 
 in the Policy Repository, a mobile client may use the __Mobile Privacy Policy Feed__ transaction (PPQ-3):
 
-![PPQ-3 sequence diagram](assets/images/PPQ-3.svg "PPQ-3 sequence diagram")
+<div>{% include PPQ-3.svg %}</div>
+<br/>
 
 To manipulate policies _groupwise_, the __Mobile Privacy Policy Bundle Feed__ transaction (PPQ-4) can be used:
 
-![PPQ-4 sequence diagram](assets/images/PPQ-4.svg "PPQ-4 sequence diagram")
+<div>{% include PPQ-4.svg %}</div>
 
 The request is a [PpqmRequestBundle](StructureDefinition-PpqmRequestBundle.html)
 resource containing one or more [PpqmConsent](StructureDefinition-PpqmConsent.html)
 resources (for add and update operations) or references to them (for the delete operation).
+<br/>
+<br/>
 
 Read access to the Policy Repository is provided by the __Mobile Privacy Policy Retrieve__ transaction (PPQ-5):
 
-![PPQ-5 sequence diagram](assets/images/PPQ-5.svg "PPQ-5 sequence diagram")
+<div>{% include PPQ-5.svg %}</div>
 
 The response is a [PpqmResponseBundle](StructureDefinition-PpqmResponseBundle.html)
 resource containing zero or more [PpqmConsent](StructureDefinition-PpqmConsent.html)
 resources.
+<br/>
+<br/>
 
 ### Further Aspects
 
