@@ -13,8 +13,8 @@
       "current": true
     },
     {
-      "version": "0.1.1",
-      "date": "2022-03-15",
+      "version": "0.2.0",
+      "date": "2022-03-16",
       "desc": "eHealth Suisse DSTU 1",
       "path": "http://fhir.ch/ig/ch-epr-ppqm",
       "status": "trial-use",

@@ -11,12 +11,19 @@ The CH:PPQm specification is based on:
 * [HL7 FHIR (R) standard Release 4](http://hl7.org/fhir/R4) &mdash; for basis definitions
 * [CH EPR Term Implementation Guide](http://fhir.ch/ig/ch-epr-term) &mdash; for Swiss EPR coding systems and value sets
 * [CH EPR mHealth Implementation Guide](http://fhir.ch/ig/ch-epr-mhealth) &mdash; for RESTful ATNA and IUA profiles
+<br/>
 
-In CH:PPQm, EPR privacy policies are represented as [PpqmConsent](StructureDefinition-PpqmConsent.html)
-resources, whose structure resembles the EPR flavor of XACML 2.0 Policy Set and obeys the same logical constraints.
+### Downloads
+
+You can [download](package.tgz) the whole Implementation Guide as a NPM package.
+
+Version history is documented in the [change log](changelog.html).
 <br/>
 
 ### Actors and Transactions
+
+In CH:PPQm, EPR privacy policies are represented as [PpqmConsent](StructureDefinition-PpqmConsent.html)
+resources, whose structure resembles the EPR flavor of XACML 2.0 Policy Set and obeys the same logical constraints.
 
 The CH:PPQm profile defines the following actors and transactions:
 
