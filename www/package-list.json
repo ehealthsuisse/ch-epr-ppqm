@@ -14,8 +14,8 @@
     },
     {
       "version": "0.2.0",
-      "date": "2022-03-16",
-      "desc": "eHealth Suisse DSTU 1",
+      "date": "2022-04-13",
+      "desc": "HL7 Switzerland Informative Ballot",
       "path": "http://fhir.ch/ig/ch-epr-ppqm",
       "status": "trial-use",
       "sequence" : "DSTU 1",
@@ -26,7 +26,7 @@
       "version": "0.1.0",
       "date": "2022-02-11",
       "desc": "eHealth Suisse DSTU 1",
-      "path": "http://fhir.ch/ig/ch-epr-ppqm",
+      "path": "http://fhir.ch/ig/ch-epr-ppqm/0.1.0",
       "status": "trial-use",
       "sequence" : "DSTU 1",
       "fhirversion": "4.0.1"
