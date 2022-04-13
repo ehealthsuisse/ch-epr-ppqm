@@ -10,12 +10,12 @@ description: Implementation Guide for the Privacy Policy Query for Mobile (PPQm)
 status: active
 license: CC-BY-SA-4.0
 copyright: CC-BY-SA-4.0
-jurisdiction: urn:iso:std:iso:3166#CH
-date: 2022-03-16
+jurisdiction: urn:iso:std:iso:3166#CHE
+date: 2022-04-13
 version: 0.2.0
 fhirVersion: 4.0.1
 copyrightYear: 2022+
-releaseLabel: DSTU 1
+releaseLabel: DSTU 1 Informative Ballot
 publisher:
   name: eHealth Suisse
   url: http://www.e-health-suisse.ch
