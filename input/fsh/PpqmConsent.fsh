@@ -177,8 +177,8 @@ Expression:     "(
                 ) or (
                     identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '202')) and 
                     (
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:emergency-access-level:normal') or 
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:emergency-access-level:restricted')
+                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:normal') or 
+                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:restricted')
                     ) and 
                     provision.period.empty() and 
                     (provision.actor.role.coding.code = 'HCP') and 

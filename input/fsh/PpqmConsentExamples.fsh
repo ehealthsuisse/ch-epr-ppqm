@@ -36,7 +36,7 @@ Usage: #example
 * category.coding = #INFA
 * patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
 * patient.identifier.value = "123456789012345678"
-* policyRule.coding = #urn:e-health-suisse:2015:policies:emergency-access-level:normal
+* policyRule.coding = #urn:e-health-suisse:2015:policies:access-level:normal
 * provision.actor.role.coding = #HCP
 * provision.actor.reference.display = "all"
 * provision.purpose = #EMER
