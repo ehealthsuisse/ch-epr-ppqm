@@ -33,4 +33,4 @@ menu:
 
 dependencies:
   ch.fhir.ig.ch-epr-term: 2.0.7
-  ch.fhir.ig.ch-epr-mhealth: 1.1.0
+  #ch.fhir.ig.ch-epr-mhealth: 1.1.0
