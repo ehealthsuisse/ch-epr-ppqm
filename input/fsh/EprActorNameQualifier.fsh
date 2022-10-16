@@ -2,6 +2,8 @@ CodeSystem: EprActorNameQualifier
 Id: EprActorNameQualifier
 Title: "EPR Actor Name Qualifier"
 Description: "Code system for actor name qualifiers in EPR"
+* ^caseSensitive = true
+* ^experimental = false
 
 * #urn:e-health-suisse:2015:epr-spid                "EPR-SPID"                  "EPR-SPID of a patient (PAT)"
 * #urn:e-health-suisse:representative-id            "Representative ID"         "ID of a patient's representative (REP)"

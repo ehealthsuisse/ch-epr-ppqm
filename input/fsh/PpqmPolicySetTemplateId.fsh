@@ -2,6 +2,8 @@ CodeSystem: PpqmPolicySetTemplateId
 Id: PpqmPolicySetTemplateId
 Title: "PPQm Policy Set Template ID"
 Description: "Code system for Policy Set Template IDs"
+* ^caseSensitive = true
+* ^experimental = false
 
 * #201   "201"   "Template 201 -- Full access for the patient"
 * #202   "202"   "Template 202 -- Read access in emergency mode"
