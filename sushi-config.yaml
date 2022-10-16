@@ -4,7 +4,7 @@
 # ?------------------------------------------------------------------------------------------------?
 id: ch.fhir.ig.ch-epr-ppqm
 canonical: http://fhir.ch/ig/ch-epr-ppqm
-name: ch_epr_ppqm
+name: CH_EPR_PPQm
 title: CH EPR PPQm (R4)
 description: Implementation Guide for the Privacy Policy Query for Mobile (PPQm) for the Swiss EPR
 status: active
@@ -12,7 +12,7 @@ license: CC-BY-SA-4.0
 copyright: CC-BY-SA-4.0
 jurisdiction: urn:iso:std:iso:3166#CHE
 date: 2022-04-13
-version: 0.2.0
+version: 0.3.0
 fhirVersion: 4.0.1
 copyrightYear: 2022+
 releaseLabel: DSTU 1 Informative Ballot
@@ -29,4 +29,4 @@ menu:
 
 dependencies:
   ch.fhir.ig.ch-epr-term: 2.0.7
-  ch.fhir.ig.ch-epr-mhealth: 1.0.0
+  ch.fhir.ig.ch-epr-mhealth: 1.1.0
