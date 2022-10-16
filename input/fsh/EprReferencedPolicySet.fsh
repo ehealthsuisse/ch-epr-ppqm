@@ -1,5 +1,6 @@
 CodeSystem: EprReferencedPolicySet
 Id: EprReferencedPolicySet
+Title: "EPR Referenced Policy Set"
 Description: "IDs of basis policy sets to be referenced from patient policies"
 
 * #urn:e-health-suisse:2015:policies:access-level:full                      "Full access"                       "Full access for a patient or a patient representative" 

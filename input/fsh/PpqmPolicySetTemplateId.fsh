@@ -1,5 +1,6 @@
 CodeSystem: PpqmPolicySetTemplateId
 Id: PpqmPolicySetTemplateId
+Title: "PPQm Policy Set Template ID"
 Description: "Code system for Policy Set Template IDs"
 
 * #201   "201"   "Template 201 -- Full access for the patient"

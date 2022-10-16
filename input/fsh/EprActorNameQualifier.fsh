@@ -1,5 +1,6 @@
 CodeSystem: EprActorNameQualifier
 Id: EprActorNameQualifier
+Title: "EPR Actor Name Qualifier"
 Description: "Code system for actor name qualifiers in EPR"
 
 * #urn:e-health-suisse:2015:epr-spid                "EPR-SPID"                  "EPR-SPID of a patient (PAT)"
