@@ -25,6 +25,10 @@ publisher:
 # ?------------------------------------------------------------------------------------------------?
 menu:
   Home: index.html
+  Profiles: artifacts.html#1
+  Value Sets: artifacts.html#2
+  Code Systems: artifacts.html#3
+  Examples: artifacts.html#4
   Artifacts: artifacts.html
 
 dependencies:
