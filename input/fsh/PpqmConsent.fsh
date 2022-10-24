@@ -81,10 +81,10 @@ Description: "Swiss EPR Policy Set as a Consent"
 * policyRule                      1..1 MS
 * policyRule                      ^short = "ID of the referenced basis policy set"
 * policyRule.coding               1..1
-* policyRule.coding.system        0..0
+* policyRule.coding               from PpqmReferencedPolicySet (required)
 * policyRule.coding.version       0..0
 * policyRule.coding.code          1..1
-* policyRule.coding.code          from PpqmReferencedPolicySet (required)
+* policyRule.coding.system        1..1 
 * policyRule.coding.display       0..1
 * policyRule.coding.userSelected  0..0
 * policyRule.text                 0..1
@@ -117,11 +117,11 @@ Description: "Swiss EPR Policy Set as a Consent"
 * provision.actor.reference.identifier.use                      0..0
 * provision.actor.reference.identifier.type                     1..1
 * provision.actor.reference.identifier.type.coding              1..1
-* provision.actor.reference.identifier.type.coding.system       0..0
+* provision.actor.reference.identifier.type.coding              from PpqmActorIdentifierType (required)
+* provision.actor.reference.identifier.type.coding.system       1..1
 * provision.actor.reference.identifier.type.coding.version      0..0
 * provision.actor.reference.identifier.type.coding.code         1..1
 * provision.actor.reference.identifier.type.coding.code         ^short = "Actor identifier type code (name qualifier)"
-* provision.actor.reference.identifier.type.coding.code         from PpqmActorIdentifierType (required)
 * provision.actor.reference.identifier.type.coding.display      0..1
 * provision.actor.reference.identifier.type.coding.userSelected 0..0
 * provision.actor.reference.identifier.type.text                0..0

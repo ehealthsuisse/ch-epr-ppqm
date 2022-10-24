@@ -14,9 +14,9 @@ Usage: #example
 * category.coding = #INFA
 * patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
 * patient.identifier.value = "123456789012345678"
-* policyRule.coding = #urn:e-health-suisse:2015:policies:access-level:full
+* policyRule.coding = $URI#urn:e-health-suisse:2015:policies:access-level:full
 * provision.actor.role.coding = #PAT
-* provision.actor.reference.identifier.type.coding = #urn:e-health-suisse:2015:epr-spid
+* provision.actor.reference.identifier.type.coding = $URI#urn:e-health-suisse:2015:epr-spid
 * provision.actor.reference.identifier.value = "123456789012345678"
 
 
@@ -36,7 +36,7 @@ Usage: #example
 * category.coding = #INFA
 * patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
 * patient.identifier.value = "123456789012345678"
-* policyRule.coding = #urn:e-health-suisse:2015:policies:access-level:normal
+* policyRule.coding = $URI#urn:e-health-suisse:2015:policies:access-level:normal
 * provision.actor.role.coding = #HCP
 * provision.actor.reference.display = "all"
 * provision.purpose = #EMER
@@ -58,7 +58,7 @@ Usage: #example
 * category.coding = #INFA
 * patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
 * patient.identifier.value = "123456789012345678"
-* policyRule.coding = #urn:e-health-suisse:2015:policies:provide-level:restricted
+* policyRule.coding = $URI#urn:e-health-suisse:2015:policies:provide-level:restricted
 * provision.actor.role.coding = #HCP
 * provision.actor.reference.display = "all"
 * provision.purpose[0] = #NORM
@@ -81,10 +81,10 @@ Usage: #example
 * category.coding = #INFA
 * patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
 * patient.identifier.value = "123456789012345678"
-* policyRule.coding = #urn:e-health-suisse:2015:policies:access-level:delegation-and-normal
+* policyRule.coding = $URI#urn:e-health-suisse:2015:policies:access-level:delegation-and-normal
 * provision.period.end = "2022-02-15"
 * provision.actor.role.coding = #HCP
-* provision.actor.reference.identifier.type.coding = #urn:gs1:gln
+* provision.actor.reference.identifier.type.coding = $URI#urn:gs1:gln
 * provision.actor.reference.identifier.value = "9876543210987"
 * provision.purpose[0] = #NORM
 
@@ -105,11 +105,11 @@ Usage: #example
 * category.coding = #INFA
 * patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
 * patient.identifier.value = "123456789012345678"
-* policyRule.coding = #urn:e-health-suisse:2015:policies:access-level:restricted
+* policyRule.coding = $URI#urn:e-health-suisse:2015:policies:access-level:restricted
 * provision.period.start = "2022-02-01"
 * provision.period.end = "2022-02-15"
 * provision.actor.role.coding = #HCP
-* provision.actor.reference.identifier.type.coding = #urn:oasis:names:tc:xspa:1.0:subject:organization-id
+* provision.actor.reference.identifier.type.coding = $URI#urn:oasis:names:tc:xspa:1.0:subject:organization-id
 * provision.actor.reference.identifier.value = "urn:oid:1.2.3.4.5"
 * provision.purpose[0] = #NORM
 
@@ -130,7 +130,7 @@ Usage: #example
 * category.coding = #INFA
 * patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
 * patient.identifier.value = "123456789012345678"
-* policyRule.coding = #urn:e-health-suisse:2015:policies:access-level:full
+* policyRule.coding = $URI#urn:e-health-suisse:2015:policies:access-level:full
 * provision.actor.role.coding = #REP
-* provision.actor.reference.identifier.type.coding = #urn:e-health-suisse:representative-id
+* provision.actor.reference.identifier.type.coding = $URI#urn:e-health-suisse:representative-id
 * provision.actor.reference.identifier.value = "representative12345"
