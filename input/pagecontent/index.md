@@ -71,3 +71,20 @@ resources.
 In order to provide interoperability between CH:PPQ and CH:PPQm, the CH:PPQm integration profile defines
 transformation rules between XACML 2.0 Policy Sets and 
 [PpqmConsent](StructureDefinition-PpqmConsent.html) resources.
+
+
+### IP Statements
+
+{% include ip-statements.xhtml %}
+
+### Cross Version Analysis
+
+{% include cross-version-analysis.xhtml %}
+
+### Dependency Table
+
+{% include dependency-table.xhtml %}
+
+### Globals Table
+
+{% include globals-table.xhtml %}
