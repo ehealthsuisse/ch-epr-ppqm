@@ -4,4 +4,8 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
+# Seems harmless
 Code found in include, however: null
+
+# Whenever the path is "StructureDefinition.snapshot.element[*].example[0].value.ofType(Identifier)", it is an error in the base specification and not in the PPQm IG itself
+if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)
