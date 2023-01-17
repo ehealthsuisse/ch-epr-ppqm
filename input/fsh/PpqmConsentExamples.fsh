@@ -5,10 +5,8 @@ Description: "PpqmConsent for template 201 -- Full access for the patient"
 Usage: #example
 * text.status = #empty
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 201 - Full access for the patient</p></div>"
-* identifier[0].type = #policySetId
-* identifier[0].value = "urn:uuid:57ab9b0d-7d97-4d85-9e4b-02bc7c939ad9"
-* identifier[1].type = #templateId
-* identifier[1].value = "201"
+* identifier[policySetId].value = "urn:uuid:57ab9b0d-7d97-4d85-9e4b-02bc7c939ad9"
+* identifier[templateId].value = "201"
 * status = #active
 * scope.coding = #patient-privacy
 * category.coding = #INFA
@@ -27,10 +25,8 @@ Description: "PpqmConsent for template 202 -- Access in emergency mode"
 Usage: #example
 * text.status = #empty
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 202 - Access in emergency mode</p></div>"
-* identifier[0].type = #policySetId
-* identifier[0].value = "urn:uuid:bf6c1fb6-2eb9-49ad-b96b-1a4ac55fc7bd"
-* identifier[1].type = #templateId
-* identifier[1].value = "202"
+* identifier[policySetId].value = "urn:uuid:bf6c1fb6-2eb9-49ad-b96b-1a4ac55fc7bd"
+* identifier[templateId].value = "202"
 * status = #active
 * scope.coding = #patient-privacy
 * category.coding = #INFA
@@ -49,10 +45,8 @@ Description: "PpqmConsent for template 203 -- Default provide level"
 Usage: #example
 * text.status = #empty
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 203 - Default provide level</p></div>"
-* identifier[0].type = #policySetId
-* identifier[0].value = "urn:uuid:710e4211-d431-430b-a849-1d689e74e4c2"
-* identifier[1].type = #templateId
-* identifier[1].value = "203"
+* identifier[policySetId].value = "urn:uuid:710e4211-d431-430b-a849-1d689e74e4c2"
+* identifier[templateId].value = "203"
 * status = #active
 * scope.coding = #patient-privacy
 * category.coding = #INFA
@@ -72,10 +66,8 @@ Description: "PpqmConsent for template 301 -- Access level for a healthcare prof
 Usage: #example
 * text.status = #empty
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 301 - Access level for a healthcare professional</p></div>"
-* identifier[0].type = #policySetId
-* identifier[0].value = "urn:uuid:f1e1ed8e-0582-4e47-a76e-5e8f6cc0908f"
-* identifier[1].type = #templateId
-* identifier[1].value = "301"
+* identifier[policySetId].value = "urn:uuid:f1e1ed8e-0582-4e47-a76e-5e8f6cc0908f"
+* identifier[templateId].value = "301"
 * status = #active
 * scope.coding = #patient-privacy
 * category.coding = #INFA
@@ -96,10 +88,8 @@ Description: "PpqmConsent for template 302 -- Access level for a group of health
 Usage: #example
 * text.status = #empty
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 302 -- Access level for a group of healthcare professionals</p></div>"
-* identifier[0].type = #policySetId
-* identifier[0].value = "urn:uuid:c23c862a-b297-43c7-875b-d933982c9756"
-* identifier[1].type = #templateId
-* identifier[1].value = "302"
+* identifier[policySetId].value = "urn:uuid:c23c862a-b297-43c7-875b-d933982c9756"
+* identifier[templateId].value = "302"
 * status = #active
 * scope.coding = #patient-privacy
 * category.coding = #INFA
@@ -121,10 +111,8 @@ Description: "PpqmConsent for template 303 -- Full access for a representative"
 Usage: #example
 * text.status = #empty
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 303 - Full access for a representative</p></div>"
-* identifier[0].type = #policySetId
-* identifier[0].value = "urn:uuid:f663289d-4cc4-41d7-a01d-213e18e1f722"
-* identifier[1].type = #templateId
-* identifier[1].value = "303"
+* identifier[policySetId].value = "urn:uuid:f663289d-4cc4-41d7-a01d-213e18e1f722"
+* identifier[templateId].value = "303"
 * status = #active
 * scope.coding = #patient-privacy
 * category.coding = #INFA
