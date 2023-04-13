@@ -136,9 +136,10 @@ Description: "Swiss EPR Policy Set as a Consent"
 * provision.action          0..0
 * provision.securityLabel   0..0
 * provision.purpose         0..* MS
-* provision.purpose         from http://fhir.ch/ig/ch-epr-term/ValueSet/EprPurposeOfUse (required)
+//* provision.purpose         from http://fhir.ch/ig/ch-epr-term/ValueSet/EprPurposeOfUse (required)    // to be restored as soon as the official EprPurposeOfUse value set contains the code DICOM_AUTO
+* provision.purpose         from ExtendedEprPurposeOfUse (required)
 * provision.purpose.system  1..1
-* provision.purpose.system  = "urn:oid:2.16.756.5.30.1.127.3.10.5" 
+//* provision.purpose.system  = "urn:oid:2.16.756.5.30.1.127.3.10.5" 
 * provision.purpose.code    1..1
 * provision.class           0..0
 * provision.code            0..0
@@ -196,18 +197,17 @@ Expression:     "(
                     (provision.actor.role.coding.code = 'HCP') and 
                     provision.actor.reference.identifier.empty() and 
                     (provision.actor.reference.display = 'all') and
-                    (provision.purpose.count() = 2) and 
+                    (provision.purpose.count() = 3) and 
                     (provision.purpose.exists(code = 'NORM')) and
-                    (provision.purpose.exists(code = 'AUTO'))
+                    (provision.purpose.exists(code = 'AUTO')) and 
+                    (provision.purpose.exists(code = 'DICOM_AUTO'))
                 ) or (
                     identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '301')) and 
                     (
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:normal') or 
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:restricted') or
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-normal') or 
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-restricted')
+                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:exclusion-list')
                     ) and 
-                    (policyRule.coding.code.contains('delegation').empty() or provision.period.end.exists()) and 
                     (provision.actor.role.coding.code = 'HCP') and 
                     (provision.actor.reference.identifier.type.coding.code = 'urn:gs1:gln') and 
                     provision.actor.reference.identifier.value.matches('^[0-9]{13}$') and 
@@ -236,5 +236,18 @@ Expression:     "(
                     provision.actor.reference.identifier.value.matches('^\\\\S+$') and 
                     provision.actor.reference.display.empty() and 
                     provision.purpose.empty()
+                ) or (
+                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '304')) and 
+                    (
+                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-normal') or 
+                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-restricted')
+                    ) and 
+                    provision.period.end.exists() and 
+                    (provision.actor.role.coding.code = 'HCP') and 
+                    (provision.actor.reference.identifier.type.coding.code = 'urn:gs1:gln') and 
+                    provision.actor.reference.identifier.value.matches('^[0-9]{13}$') and 
+                    provision.actor.reference.display.empty() and
+                    (provision.purpose.count() = 1) and 
+                    (provision.purpose.code = 'NORM')
                 )"
 Severity:       #error
