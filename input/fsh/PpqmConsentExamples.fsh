@@ -74,7 +74,7 @@ Usage: #example
 * category.coding = #INFA
 * patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
 * patient.identifier.value = "123456789012345678"
-* policyRule.coding = $URI#urn:e-health-suisse:2015:policies:access-level:normal
+* policyRule.coding = $URI#urn:e-health-suisse:2015:policies:access-level:delegation-and-normal
 * provision.period.end = "2022-02-15"
 * provision.actor.role.coding = #HCP
 * provision.actor.reference.identifier.type.coding = $URI#urn:gs1:gln
@@ -123,25 +123,3 @@ Usage: #example
 * provision.actor.role.coding = #REP
 * provision.actor.reference.identifier.type.coding = $URI#urn:e-health-suisse:representative-id
 * provision.actor.reference.identifier.value = "representative12345"
-
-
-Instance: Template304Consent
-InstanceOf: PpqmConsent
-Title: "PpqmConsent for template 304 -- Access level with delegation for a healthcare professional"
-Description: "PpqmConsent for template 304 -- Access level with delegation for a healthcare professional"
-Usage: #example
-* text.status = #empty
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Template 304 - Access level with delegation for a healthcare professional</p></div>"
-* identifier[policySetId].value = "urn:uuid:f1e1ed8e-0582-4e47-a76e-5e8f6cc090ab"
-* identifier[templateId].value = "304"
-* status = #active
-* scope.coding = #patient-privacy
-* category.coding = #INFA
-* patient.identifier.system = "urn:oid:2.16.756.5.30.1.127.3.10.3"
-* patient.identifier.value = "123456789012345678"
-* policyRule.coding = $URI#urn:e-health-suisse:2015:policies:access-level:delegation-and-normal
-* provision.period.end = "2023-04-20"
-* provision.actor.role.coding = #HCP
-* provision.actor.reference.identifier.type.coding = $URI#urn:gs1:gln
-* provision.actor.reference.identifier.value = "9876543210987"
-* provision.purpose[0] = ChEhealthCodesystemPurposeOfUse#NORM

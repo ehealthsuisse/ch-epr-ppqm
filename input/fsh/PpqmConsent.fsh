@@ -206,8 +206,11 @@ Expression:     "(
                     (
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:normal') or 
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:restricted') or
+                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-normal') or 
+                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-restricted') or
                         (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:exclusion-list')
                     ) and 
+                    (policyRule.coding.code.contains('delegation').empty() or provision.period.end.exists()) and
                     (provision.actor.role.coding.code = 'HCP') and 
                     (provision.actor.reference.identifier.type.coding.code = 'urn:gs1:gln') and 
                     provision.actor.reference.identifier.value.matches('^[0-9]{13}$') and 
@@ -236,18 +239,5 @@ Expression:     "(
                     provision.actor.reference.identifier.value.matches('^\\\\S+$') and 
                     provision.actor.reference.display.empty() and 
                     provision.purpose.empty()
-                ) or (
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '304')) and 
-                    (
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-normal') or 
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-restricted')
-                    ) and 
-                    provision.period.end.exists() and 
-                    (provision.actor.role.coding.code = 'HCP') and 
-                    (provision.actor.reference.identifier.type.coding.code = 'urn:gs1:gln') and 
-                    provision.actor.reference.identifier.value.matches('^[0-9]{13}$') and 
-                    provision.actor.reference.display.empty() and
-                    (provision.purpose.count() = 1) and 
-                    (provision.purpose.code = 'NORM')
                 )"
 Severity:       #error
