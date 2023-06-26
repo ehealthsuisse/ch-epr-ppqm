@@ -136,10 +136,9 @@ Description: "Swiss EPR Policy Set as a Consent"
 * provision.action          0..0
 * provision.securityLabel   0..0
 * provision.purpose         0..* MS
-//* provision.purpose         from http://fhir.ch/ig/ch-epr-term/ValueSet/EprPurposeOfUse (required)    // to be restored as soon as the official EprPurposeOfUse value set contains the code DICOM_AUTO
-* provision.purpose         from ExtendedEprPurposeOfUse (required)
+* provision.purpose         from http://fhir.ch/ig/ch-epr-term/ValueSet/EprPurposeOfUse (required)
 * provision.purpose.system  1..1
-//* provision.purpose.system  = "urn:oid:2.16.756.5.30.1.127.3.10.5" 
+* provision.purpose.system  = "urn:oid:2.16.756.5.30.1.127.3.10.5" 
 * provision.purpose.code    1..1
 * provision.class           0..0
 * provision.code            0..0

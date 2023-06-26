@@ -57,7 +57,7 @@ Usage: #example
 * provision.actor.reference.display = "all"
 * provision.purpose[0] = ChEhealthCodesystemPurposeOfUse#NORM
 * provision.purpose[1] = ChEhealthCodesystemPurposeOfUse#AUTO
-* provision.purpose[2] = ExtendedEprPurposeOfUse#DICOM_AUTO
+* provision.purpose[2] = ChEhealthCodesystemPurposeOfUse#DICOM_AUTO
 
 
 Instance: Template301Consent
