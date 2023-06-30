@@ -1,5 +1,5 @@
 <div markdown="1" class="stu-note">
-This implementation guide is under informative ballot by [HL7 Switzerland](https://www.hl7.ch/) until the end of September 2022. Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
+This implementation guide is under informative ballot by [HL7 Switzerland](https://www.hl7.ch/) until the end of September 2023. Please add your feedback via the ‘Propose a change’-link in the footer on the page where you have comments.
 </div>
 
 ### Introduction
