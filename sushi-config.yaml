@@ -8,14 +8,14 @@ name: CH_EPR_PPQm
 title: CH EPR PPQm (R4)
 description: Implementation Guide for the Privacy Policy Query for Mobile (PPQm) for the Swiss EPR
 status: active
-license: CC-BY-SA-4.0
-copyright: CC-BY-SA-4.0
+license: CC0-1.0
+copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
-date: 2022-04-13
-version: 0.3.0
+date: 2023-06-30
+version: 2.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2022+
-releaseLabel: DSTU 1 Informative Ballot
+releaseLabel: ballot
 publisher:
   name: eHealth Suisse
   url: http://www.e-health-suisse.ch
@@ -45,5 +45,6 @@ menu:
   Artifacts: artifacts.html
 
 dependencies:
-  ch.fhir.ig.ch-epr-term: current
+  hl7.terminology: 5.1.0
+  ch.fhir.ig.ch-epr-term: 2.0.9
   #ch.fhir.ig.ch-epr-mhealth: 1.1.0
