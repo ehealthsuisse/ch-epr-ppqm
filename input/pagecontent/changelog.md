@@ -1,6 +1,6 @@
 All significant changes to this FHIR implementation guide will be documented on this page.
 
-### Version 0.3.0 (tbd)
+### Version 2.0.0 (tbd)
 
 * Added examples of request and response bundles.
 * Created separate tabs on the HTML page.
