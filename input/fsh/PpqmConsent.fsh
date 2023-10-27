@@ -13,16 +13,16 @@ Description: "Swiss EPR Policy Set as a Consent"
 * identifier ^slicing.ordered               = false
 
 * identifier contains
-    policySetId 1..1 MS and
-    templateId  1..1 MS
+    policySetId 1..1 and
+    templateId  1..1
 
 * identifier[policySetId]               ^short = "UUID of the Policy Set"
 * identifier[policySetId].use           0..0 
-* identifier[policySetId].type          1..1 MS
+* identifier[policySetId].type          1..1 
 * identifier[policySetId].type.coding   1..1
 * identifier[policySetId].type.coding   = PpqmConsentIdentifierType#policySetId
 * identifier[policySetId].system        0..0 
-* identifier[policySetId].value         1..1 MS
+* identifier[policySetId].value         1..1 
 * identifier[policySetId].value         ^short = "UUID of the policy set in URN format"
 * identifier[policySetId].value         obeys ch-epr-ppqm-uuid-format
 * identifier[policySetId].period        0..0 
@@ -30,11 +30,11 @@ Description: "Swiss EPR Policy Set as a Consent"
 
 * identifier[templateId]                ^short = "Template ID of the policy set"
 * identifier[templateId].use            0..0 
-* identifier[templateId].type           1..1 MS
+* identifier[templateId].type           1..1 
 * identifier[templateId].type.coding    1..1
 * identifier[templateId].type.coding    = PpqmConsentIdentifierType#templateId
 * identifier[templateId].system         0..0 
-* identifier[templateId].value          1..1 MS
+* identifier[templateId].value          1..1 
 * identifier[templateId].value          ^short = "Template ID of the policy set"
 * identifier[templateId].value          from PpqmPolicySetTemplateId (required)
 * identifier[templateId].period         0..0 
@@ -56,7 +56,7 @@ Description: "Swiss EPR Policy Set as a Consent"
 * patient                       1..1
 * patient.reference             0..0
 * patient.type                  0..0
-* patient.identifier            1..1 MS
+* patient.identifier            1..1 
 * patient.identifier.use        0..0 
 * patient.identifier.type       0..0 
 * patient.identifier.system     1..1 
@@ -78,7 +78,7 @@ Description: "Swiss EPR Policy Set as a Consent"
 
 * policy        0..0
 
-* policyRule                      1..1 MS
+* policyRule                      1..1 
 * policyRule                      ^short = "ID of the referenced basis policy set"
 * policyRule.coding               1..1
 * policyRule.coding               from PpqmReferencedPolicySet (required)
@@ -94,25 +94,25 @@ Description: "Swiss EPR Policy Set as a Consent"
 * provision                 1..1
 * provision.type            0..0
 * provision.period          0..1
-* provision.period.start    0..1 MS
+* provision.period.start    0..1 
 * provision.period.start    ^short = "Start date of the policy set validity, yyyy-mm-dd"
 * provision.period.start    obeys ch-epr-ppqm-date-format
-* provision.period.end      1..1 MS
+* provision.period.end      1..1 
 * provision.period.end      ^short = "End date of the policy set validity, yyyy-mm-dd"
 * provision.period.end      obeys ch-epr-ppqm-date-format
 
 * provision.actor                       1..1
-* provision.actor.role                  1..1 MS
+* provision.actor.role                  1..1 
 * provision.actor.role                  from http://fhir.ch/ig/ch-epr-term/ValueSet/EprRole (required)
 * provision.actor.role.coding.system    1..1
 * provision.actor.role.coding.system    = "urn:oid:2.16.756.5.30.1.127.3.10.6"
 * provision.actor.role.coding.code      1..1
 * provision.actor.role.coding.code      ^short = "EPR actor role code"
 
-* provision.actor.reference                                     1..1 MS
+* provision.actor.reference                                     1..1 
 * provision.actor.reference.reference                           0..0
 * provision.actor.reference.type                                0..0
-* provision.actor.reference.identifier                          0..1 MS
+* provision.actor.reference.identifier                          0..1 
 * provision.actor.reference.identifier                          ^short = "This element is present only in policy sets which reference a particular healthcare professional, group of healthcare professionals, patient, or representative"
 * provision.actor.reference.identifier.use                      0..0
 * provision.actor.reference.identifier.type                     1..1
@@ -130,12 +130,12 @@ Description: "Swiss EPR Policy Set as a Consent"
 * provision.actor.reference.identifier.period                   0..0
 * provision.actor.reference.identifier.assigner                 0..0
 
-* provision.actor.reference.display 0..1 MS
+* provision.actor.reference.display 0..1 
 * provision.actor.reference.display ^short = "This element is present only in policy sets which reference indefinite sets of actors"
 
 * provision.action          0..0
 * provision.securityLabel   0..0
-* provision.purpose         0..* MS
+* provision.purpose         0..* 
 * provision.purpose         from http://fhir.ch/ig/ch-epr-term/ValueSet/EprPurposeOfUse (required)
 * provision.purpose.system  1..1
 * provision.purpose.system  = "urn:oid:2.16.756.5.30.1.127.3.10.5" 
@@ -163,7 +163,7 @@ Expression:     "toString().matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')"
 Severity:       #error
 
 Invariant:      ch-epr-ppqm-template-structure
-Description:    "The resource shall correspong to one of official policy set templates"
+Description:    "The resource shall correspond to one of official policy set templates"
 Expression:     "(
                     identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '201')) and 
                     (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:full') and 

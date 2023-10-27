@@ -1,7 +1,7 @@
-Profile: PpqmRequestBundle
+Profile: PpqmFeedRequestBundle
 Parent: Bundle
-Id: PpqmRequestBundle
-Title: "PpqmRequestBundle"
+Id: PpqmFeedRequestBundle
+Title: "PpqmFeedRequestBundle"
 Description: "Bundle for Mobile Privacy Policy Bundle Feed requests"
 
 * obeys ch-epr-ppqm-method-equality

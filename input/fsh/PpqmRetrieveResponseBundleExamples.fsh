@@ -1,7 +1,7 @@
-Instance: PpqmResponseBundle
-InstanceOf: PpqmResponseBundle
-Title: "PPQm Response Bundle"
-Description: "PPQm Response Bundle"
+Instance: PpqmRetrieveResponseBundle
+InstanceOf: PpqmRetrieveResponseBundle
+Title: "PPQm Retrieve Response Bundle"
+Description: "PPQm Retrieve Response Bundle"
 Usage: #example
 * type = http://hl7.org/fhir/bundle-type#searchset
 * total = 3
