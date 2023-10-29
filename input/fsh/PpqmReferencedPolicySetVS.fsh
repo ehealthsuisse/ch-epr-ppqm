@@ -1,6 +1,6 @@
 ValueSet: PpqmReferencedPolicySet
 Title: "PPQm Referenced Policy Set"
-Description: "IDs of basis policy sets that may be referenced from templates.  Note that this value set intentionally does not contain IDs of all policy sets contained in the official stack, see <a href='https://github.com/ehealthsuisse/ch-epr-adr-ppq/blob/main/docs/Policies.md'>documentation</a>"
+Description: "IDs of basis policy sets that may be referenced from templates.  Note that this value set intentionally does not contain IDs of all policy sets contained in the official stack, see [documentation](https://github.com/ehealthsuisse/ch-epr-adr-ppq/blob/main/docs/Policies.md)"
 * ^experimental = false
 
 * $URI#urn:e-health-suisse:2015:policies:access-level:full                      "Full access"                     // "Full access for a patient or a patient representative" 

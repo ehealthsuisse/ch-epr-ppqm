@@ -165,78 +165,78 @@ Severity:       #error
 Invariant:      ch-epr-ppqm-template-structure
 Description:    "The resource shall correspond to one of official policy set templates"
 Expression:     "(
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '201')) and 
-                    (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:full') and 
-                    provision.period.empty() and 
-                    (provision.actor.role.coding.code = 'PAT') and 
-                    (provision.actor.reference.identifier.type.coding.code = 'urn:e-health-suisse:2015:epr-spid') and 
-                    provision.actor.reference.identifier.value.matches('^[0-9]{18}$') and 
-                    provision.actor.reference.display.empty() and 
-                    provision.purpose.empty() and 
-                    (provision.actor.reference.identifier.value = patient.identifier.value)
+                    identifier.exists(type.coding.exists((system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (code = 'templateId')) and (value = '201')) and 
+                    (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:access-level:full') and 
+                    provision[0].period.empty() and 
+                    (provision[0].actor.role.coding.code = 'PAT') and 
+                    (provision[0].actor.reference.identifier.type.coding.code = 'urn:e-health-suisse:2015:epr-spid') and 
+                    provision[0].actor.reference.identifier.value.matches('^[0-9]{18}$') and 
+                    provision[0].actor.reference.display.empty() and 
+                    provision[0].purpose.empty() and 
+                    (provision[0].actor.reference.identifier[0].value = patient.identifier.value)
                 ) or (
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '202')) and 
+                    identifier.exists(type.coding.exists((system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (code = 'templateId')) and (value = '202')) and 
                     (
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:normal') or 
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:restricted')
+                        (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:access-level:normal') or 
+                        (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:access-level:restricted')
                     ) and 
-                    provision.period.empty() and 
-                    (provision.actor.role.coding.code = 'HCP') and 
-                    provision.actor.reference.identifier.empty() and 
-                    (provision.actor.reference.display = 'all') and
-                    (provision.purpose.count() = 1) and 
-                    (provision.purpose.code = 'EMER')
+                    provision[0].period.empty() and 
+                    (provision[0].actor.role.coding.code = 'HCP') and 
+                    provision[0].actor.reference.identifier.empty() and 
+                    (provision[0].actor.reference.display = 'all') and
+                    (provision[0].purpose.count() = 1) and 
+                    (provision[0].purpose.code = 'EMER')
                 ) or (
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '203')) and 
+                    identifier.exists(type.coding.exists((system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (code = 'templateId')) and (value = '203')) and 
                     (
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:provide-level:normal') or 
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:provide-level:restricted')
+                        (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:provide-level:normal') or 
+                        (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:provide-level:restricted')
                     ) and 
-                    provision.period.empty() and 
-                    (provision.actor.role.coding.code = 'HCP') and 
-                    provision.actor.reference.identifier.empty() and 
-                    (provision.actor.reference.display = 'all') and
-                    (provision.purpose.count() = 3) and 
-                    (provision.purpose.exists(code = 'NORM')) and
-                    (provision.purpose.exists(code = 'AUTO')) and 
-                    (provision.purpose.exists(code = 'DICOM_AUTO'))
+                    provision[0].period.empty() and 
+                    (provision[0].actor.role.coding.code = 'HCP') and 
+                    provision[0].actor.reference.identifier.empty() and 
+                    (provision[0].actor.reference.display = 'all') and
+                    (provision[0].purpose.count() = 3) and 
+                    (provision[0].purpose.exists(code = 'NORM')) and
+                    (provision[0].purpose.exists(code = 'AUTO')) and 
+                    (provision[0].purpose.exists(code = 'DICOM_AUTO'))
                 ) or (
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '301')) and 
+                    identifier.exists(type.coding.exists((system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (code = 'templateId')) and (value = '301')) and 
                     (
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:normal') or 
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:restricted') or
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-normal') or 
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-restricted') or
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:exclusion-list')
+                        (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:access-level:normal') or 
+                        (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:access-level:restricted') or
+                        (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-normal') or 
+                        (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:access-level:delegation-and-restricted') or
+                        (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:exclusion-list')
                     ) and 
                     (policyRule.coding.code.contains('delegation').empty() or provision.period.end.exists()) and
-                    (provision.actor.role.coding.code = 'HCP') and 
-                    (provision.actor.reference.identifier.type.coding.code = 'urn:gs1:gln') and 
-                    provision.actor.reference.identifier.value.matches('^[0-9]{13}$') and 
-                    provision.actor.reference.display.empty() and
-                    (provision.purpose.count() = 1) and 
-                    (provision.purpose.code = 'NORM')
+                    (provision[0].actor.role.coding.code = 'HCP') and 
+                    (provision[0].actor.reference.identifier.type.coding.code = 'urn:gs1:gln') and 
+                    provision[0].actor.reference.identifier.value.matches('^[0-9]{13}$') and 
+                    provision[0].actor.reference.display.empty() and
+                    (provision[0].purpose.count() = 1) and 
+                    (provision[0].purpose.code = 'NORM')
                 ) or (
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '302')) and 
+                    identifier.exists(type.coding.exists((system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (code = 'templateId')) and (value = '302')) and 
                     (
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:normal') or 
-                        (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:restricted')
+                        (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:access-level:normal') or 
+                        (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:access-level:restricted')
                     ) and 
-                    provision.period.end.exists() and 
-                    (provision.actor.role.coding.code = 'HCP') and 
-                    (provision.actor.reference.identifier.type.coding.code = 'urn:oasis:names:tc:xspa:1.0:subject:organization-id') and 
-                    provision.actor.reference.identifier.value.lower().matches('^urn:oid:([0-2])((\\\\.0)|(\\\\.[1-9][0-9]*))*$') and 
-                    provision.actor.reference.display.empty() and 
-                    (provision.purpose.count() = 1) and 
-                    (provision.purpose.code = 'NORM')
+                    provision[0].period.end.exists() and 
+                    (provision[0].actor.role.coding.code = 'HCP') and 
+                    (provision[0].actor.reference.identifier.type.coding.code = 'urn:oasis:names:tc:xspa:1.0:subject:organization-id') and 
+                    provision[0].actor.reference.identifier.value.lower().matches('^urn:oid:([0-2])((\\\\.0)|(\\\\.[1-9][0-9]*))*$') and 
+                    provision[0].actor.reference.display.empty() and 
+                    (provision[0].purpose.count() = 1) and 
+                    (provision[0].purpose.code = 'NORM')
                 ) or (
-                    identifier.exists((type.coding.system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (type.coding.code = 'templateId') and (value = '303')) and 
-                    (policyRule.coding.code = 'urn:e-health-suisse:2015:policies:access-level:full') and 
-                    provision.period.empty() and 
-                    (provision.actor.role.coding.code = 'REP') and 
-                    (provision.actor.reference.identifier.type.coding.code = 'urn:e-health-suisse:representative-id') and 
-                    provision.actor.reference.identifier.value.matches('^\\\\S+$') and 
-                    provision.actor.reference.display.empty() and 
-                    provision.purpose.empty()
+                    identifier.exists(type.coding.exists((system = 'http://fhir.ch/ig/ch-epr-ppqm/CodeSystem/PpqmConsentIdentifierType') and (code = 'templateId')) and (value = '303')) and 
+                    (policyRule[0].coding.code = 'urn:e-health-suisse:2015:policies:access-level:full') and 
+                    provision[0].period.empty() and 
+                    (provision[0].actor.role.coding.code = 'REP') and 
+                    (provision[0].actor.reference.identifier.type.coding.code = 'urn:e-health-suisse:representative-id') and 
+                    provision[0].actor.reference.identifier.value.matches('^\\\\S+$') and 
+                    provision[0].actor.reference.display.empty() and 
+                    provision[0].purpose.empty()
                 )"
 Severity:       #error
