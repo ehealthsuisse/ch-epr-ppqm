@@ -11,11 +11,11 @@ status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CHE
-date: 2023-06-30
+date: 2023-12-20
 version: 2.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2022+
-releaseLabel: ci-build
+releaseLabel: draft
 publisher:
   name: eHealth Suisse
   url: http://www.e-health-suisse.ch
@@ -45,6 +45,6 @@ menu:
   Artifacts: artifacts.html
 
 dependencies:
-  hl7.terminology: 5.3.0
-  ch.fhir.ig.ch-epr-term: 2.0.9
+  hl7.terminology: 5.4.0
+  ch.fhir.ig.ch-epr-term: 2.0.10
   #ch.fhir.ig.ch-epr-mhealth: 1.1.0
